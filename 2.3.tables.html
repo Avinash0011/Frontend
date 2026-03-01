@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Table</h1>
+    <table border="5" cellpadding="30" cellspacing="20" bgcolor="pink" bordercolor="black"
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td rowspan="2">Avii</td>
+        <td>Java</td>
+        <td>90</td>
+        </Tr>
+        <tr>
+           <!-- <td>kamlii</td> -->
+            <!--<td>java</td>-->
+            <td>C++</td>
+            <td>90</td>
+        </tr>
+    </tbody>
+</table>
+    <hr>
+    <Br>
+
+
+       <!-- Form creation -->
+    <h1>Form</h1>
+    <form action=" ">
+        <label for="your_name">Enter Name</label>
+        <input id="your_name" type="text" name="your_name" size="30" placeholder="Enter your name">
+        <br><br>
+
+        <label for="Rollno">Roll no</label>
+        <input id="Rollno" type="number" name="Rollno" size="20" maxlength="2"> 
+        <!--value is used for by defalut seted value and maxlength is used for setting max number of character-->
+        <br><br>
+
+        <label for="pass">Enter password</label>
+        <input type="password" name="pass" id="pass">
+        <br><br>
+        <label for="email_id">Email ID</label>
+        <input type="email" id="email_id" name="email_id" required>
+        <!-- required keyword is used for mandat -->
+        <br><br>
+
+        <!--textarea keyword is used for multi lines-->
+        <label for="review">Write a Review:</label><br>
+        <textarea name="review" id="review" rows="10" cols="50">This is good movie</textarea>
+        <br><br>
+
+        <!--checkbox keyword is used for multi.choose-->
+        <label for="hobby">Choose your hobby:</label>
+        <input type="checkbox" name="hobby1" id="hobby" value="garden">Gardening
+        <input type="checkbox" name="hobby1" id="hobby" value="sing">Singing
+        <input type="checkbox" name="hobby1" id="hobby" value="dance">Dancing
+        <br><br>
+
+        <!---->
+        <label for="pro">Select Your Programme:</label>
+        <input type="radio" name="pro" id="pro">Btech<!--in this only click on circle then select-->
+        <input type="radio" name="pro" id="bca"><!--in this click on name then also select-->
+        <label for="bca">BCA</label>
+        <input type="radio" name="pro" id="b.ed" value="b.ed" checked>
+        <label for="b.ed">B.ED</label>
+        <br><br>
+
+        <!---->
+        <label for="statesel">Choose your State:</label>
+        <select name="statesel" id="statesel" size="4" multiple>
+            <option value="choose State">Choose your State</option>
+            <option value="punjab">Punjab</option>
+            <option value="raj" selected>Rajasthan</option>
+            <option value="sik">Sikkim</option>
+            <option value="kerala">Kerala</option>
+        </select>
+            <br><br>
+
+            <!---->
+            <label for="filesel">Choose File:</label>
+            <input type="file" name="filesel" id="filesel">
+            <br><Br>
+
+        
+        <!-- <button>Submit</button> -->
+        <input type="submit" name="submitform" id="submitform" value="Submit Form"> <!--by this we can also create button-->
+        <input type="reset" name="resetform" id="resetform" value="Reset Form">
+        <input type="image" name="submit" id="image" img src="">
+    </form>
+
+        
+    
+</body>
+</html>
