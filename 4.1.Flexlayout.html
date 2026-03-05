@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-layout</title>
+
+    <style>
+        .container{
+            display: flex;
+            background-color: black;
+            padding: 10px;
+            min-height: 500px;
+            /* justify-content: center; flex-end, flex-start, space-evenly, space-between */
+            align-items: center; /* align-items horizontally*/
+            /* flex-direction: column;by default it will be row */
+            flex-wrap: nowrap;/* when the user decrease the width of the screen the this propert start wrapping the content in the row*/
+            column-gap: 30px;
+        }
+        .item{
+            background-color: aqua;
+            border: 2px solid black;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            /* align-content: center; */
+            align-items: center;
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+        #vg{
+            /* flex-grow: 5; */
+            flex-shrink: 0;
+            align-self: flex-start;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="vg">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+    </div>
+</body>
+</html>
+
+<!-- How to push respository to github account -->
+<!-- git init git initialization 1]-->
+<!-- git status  -->
+<!-- git add --a it will add all the files in your repository -->
+<!-- git add <filename> -->
+<!-- now again git status to check all the files are added to the staging area -->
