@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity-4</title>
+
+    <link rel="stylesheet" href="/src/output.css">
+
+    <style>
+        .container{
+            width: 600px;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .t2{
+            margin-top: 10px;
+            margin-left: 17px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .t1{
+            border: 2px dashed black;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 class="text-center font-bold text-2xl">Tailwind CSS Box Model Example</h1>
+    <div class="container">
+        <div class="text-white text-2xl p-4">Box Model</div>
+        <p class="text-white text-1xl pl-4">The box demonstrates the properties of the box model using tailwind css</p>
+
+        <div class="t2">
+            <h3 class="font-bold">Padding</h3>
+            <p>The box has p-4, which means padding of 1rem(16px)</p>
+        </div>
+
+        <div class="t2 t1">
+            <h3 class="font-bold">Border</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perferendis!</p>
+        </div>
+
+        <div class="t2 t3">
+            <h3 class="font-bold">Margin</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perferendis!</p>
+        </div>
+
+        <div class="t2 t3 w-60">
+            <h3 class="font-bold inline">Width and height</h3>
+            <p class="inline ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perferendis!</p>
+        </div>
+    </div>
+</body>
+</html>
