@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css" />
+  </head>
+  <body>
+    <div class="w-32 h-32 bg-purple-300 divclass relative" id="div1">
+      <h1 class="text-2xl">Heading</h1>
+      <p>This is a para</p>
+    </div>
+
+    <br /><br />
+
+    <button class="border-2 rounded-2xl bg-cyan-400" id="setbtn">Set Value</button>
+    <button class="border-2 rounded-2xl bg-pink-300" id="app">Append</button>
+    <button class="border-2 rounded-2xl bg-green-300" id="pre">Prepend</button>
+    <button class="border-2 rounded-2xl bg-purple-400" id="afterbtn">After</button>
+    <button class="border-2 rounded-2xl bg-amber-500" id="beforebtn">Before</button>
+    <button class="border-2 rounded-2xl bg-orange-500" id="emptybtn">Empty</button>
+    <button class="border-2 rounded-2xl bg-blue-300" id="removebtn">Remove</button>
+    <button class="border-2 rounded-2xl bg-red-400" id="animatebtn">Animate</button>
+    <button class="border-4 rounded-2xl bg-green-400">Add Classes to Elements</button>
+
+    <!-- <div class="w-32 h-32 bg-green-300 divclass" id="div2"></div> -->
+
+    <!-- <ul class="list-disc m-10 divclass">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+
+    <br>
+    <form action="">
+        <label for="">Enter name:</label>
+        <input type="text" name="" id="input1" class="border-2 m-2 p-2">
+
+        <br><br>
+        <label for="">Enter Password:</label>
+        <input type="password" name="" id="input2" class="border-2 m-2 p-2">
+
+        <br><br>
+
+        <select name="" id="select1" class="border-2">
+            <option value="Punjab">Punjab</option>
+            <option value="Andhra">Andhra Pradesh</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Haryana">Haryana</option>
+        </select>
+    </form> -->
+
+    <!-- <div class="w-32 h-32 bg-green-300 divclass" id="div3"></div> -->
+
+    <!-- <script src="/jquery-3.7.1.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        // alert("OK");
+        // $('#div1').html("INT219");
+        var a = $("#div1").html();
+        var b = $("#div1").text();
+        var c = $("#div1").attr("class");
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        $("#div2").html(a);
+
+        $("#animatebtn").click(function () {
+          $("#div1").animate(
+            {
+              top: "200px",
+              fontSize: "30px",
+              width: "300px",
+            },
+            2000
+          );
+
+          $("#div1").animate(
+            {
+              left: "300px",
+              fontSize: "10px",
+              width: "100px",
+            },
+            2000
+          );
+          $("#div1").animate(
+            {
+              top: "0px",
+              left: "300px",
+              fontSize: "10px",
+              width: "100px",
+            },
+            2000
+          );
+        });
+
+        $("#emptybtn").click(function () {
+          $("#div1 h1").empty();
+        });
+
+        $("#removebtn").click(function () {
+          $("#div1 h1").remove();
+        });
+
+        $("#beforebtn").click(function () {
+          $("#div1").before("<p>INT</p>");
+        });
+
+        $("#app").click(function () {
+          $("#div1").append("<p>INT219</p>");
+        });
+
+        $("#setbtn").click(function () {
+          $("#div1").html("<i>Hello</i>");
+          // $('#div1').text("<i>Hello</i>");
+          $("#div1").attr("class", "border-2");
+          $("#input1").val("Sakshi");
+        });
+
+        // $('.divclass').css("color","blue");
+
+        // $('.divclass').css({"color":"blue","border":"2px solid red"});
+
+        // $('*').css({"color":"blue","border":"2px solid red"});
+
+        // $('div,ul').css({"color":"blue","border":"2px solid red"});
+        // $('ul li:odd').css({"color":"blue","border":"2px solid red"});
+        $("ul li:lt(3)").css({ color: "blue", border: "2px solid red" });
+
+        $("#div1").click(function () {
+          $(this).css("background-color", "yellow");
+        });
+
+        $("#div1").dblclick(function () {
+          $(this).css("background-color", "green");
+        });
+        $("#div1").contextmenu(function () {
+          $(this).css("background-color", "brown");
+        });
+
+        // $('#input1').keydown(function(){
+
+        // alert("Key Pressed");
+        // })
+
+        // $('#input1').keyup(function(){
+
+        //     $(this).css("background-color","pink")
+        // })
+
+        $("#input1,#input2").focus(function () {
+          $(this).css("background-color", "orange");
+        });
+
+        $("#input1,#input2").blur(function () {
+          $(this).css("background-color", "");
+        });
+
+        $("#input1,#input2").select(function () {
+          $(this).css("background-color", "brown");
+        });
+
+        $("#select1").change(function () {
+          $(this).css({ "background-color": "green", color: "white" });
+          var b = $(this).val();
+          $("#div3").html(b);
+
+        });
+      });
+    </script>
+  </body>
+</html>

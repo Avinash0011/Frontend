@@ -1,0 +1,48 @@
+<!-- document.getElementsById(Id) 
+ document.getElementsByClassName(className)
+ document.getElementsByTagName(tagName)
+document.querySelector(selector)
+document.querySelectorAll(selector)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body>
+    <p id="id1">Hello1</p>
+    <p id="id2">Hello2</p>
+    <p id="id3">Hello3</p>
+    <p id="id4">Hello4</p>
+
+    <button id="btn1" class="border-2" onclick="changecontent()">Click!!</button>
+
+
+
+    <script>
+        function changecontent(){
+            let elt = document.getElementById("id2");
+            elt.innerHTML = "INT219";
+        }
+        // let elts = document.getElementsByClassName("Hello2");
+        // elts[1].innerHTML = "INT219";
+
+        // let elts = document.getElementsByTagName("p");
+        // elts[1].innerHTML="INT-219";
+        // for(var i=0; i<elts.length;i++){
+        //     elts[i].innerHTML="Front";
+        // }
+
+        let elt = document.querySelector(".para");
+        elt.innerHTML = "Web class";
+        document.querySelectorAll(".para");
+        for(var i=0; i<elts.length;i++){
+            elts[i].innerHTML="Front End";
+        }
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body>
+    <div class="flex justify-center h-screen gap-4 items-center">
+        <img src="https://images.unsplash.com/photo-1583364501903-49485df18877?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww" alt="" class="w-32 h-32 rounded-2xl cursor-pointer hover:scale-110 transition border-2" onclick="addImage(0)">
+        <img src="https://images.unsplash.com/photo-1731596691311-5955c052b66e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww" alt="" class="w-32 h-32 rounded-2xl cursor-pointer hover:scale-110 transition border-2" onclick="addImage(1)">
+        <img src="https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww" alt="" class="w-32 h-32 rounded-2xl cursor-pointer hover:scale-110 transition border-2" onclick="addImage(2)">
+    </div>
+    <div class="flex justify-center items-center bg-black/50 fixed inset-0 hidden" id="dummydiv">
+        <img src="" alt="" id="dummyimg" class="max-h-[80vh] rounded-2xl">
+        <button class="text-4xl bg-gray-200 text-black rounded-full top-5 right-5 absolute p-7" onclick="removeImg()">X</button>
+        <button class="text-4xl absolute right-5 cursor-pointer text-white" onclick="nextImg()">></button>
+        <button class="text-4xl absolute left-5 cursor-pointer text-white" onclick="prevImg()"><</button>
+    </div>
+
+    <script>
+        const images = [
+            "https://images.unsplash.com/photo-1583364501903-49485df18877?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1731596691311-5955c052b66e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww"
+        ];
+
+        let currentIndex = 0;
+
+        function addImage(index) {
+            currentIndex = index;
+            document.getElementById("dummyimg").src = images[currentIndex];
+            document.getElementById("dummydiv").classList.remove("hidden");
+        }
+
+        function removeImg() {
+            document.getElementById("dummydiv").classList.add("hidden");
+        }
+
+        function nextImg() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById("dummyimg").src = images[currentIndex];
+        }
+
+        function prevImg() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById("dummyimg").src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>

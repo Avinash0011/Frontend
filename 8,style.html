@@ -1,0 +1,73 @@
+<!-- element.style.property = value:
+element.classList.add(className):
+element.classList.remove(className): -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body>
+    
+    <p id="p1">This is a styled paragraph</p>
+    <button id="btn1" class="border-2 rounded-2xl " onclick="changeStyle()">Change Style</button>
+    
+    
+    <script>
+        function changeStyle(){
+            let elt = document.getElementById("p1");
+            elt.style.color = "purple";
+            elt.style.backgroundColor="orange";
+            elt.style.textAlign = "center";
+            elt.style.fontSize = "30px";
+        }
+    </script>
+    
+    <p id="p2">This is a styled paragraph</p>
+    <button id="btn2" class="border-2 rounded-2xl " onclick="changetoggleStyle()">Chaneg</button>
+
+    <script>
+        function changetoggleStyle(){
+            let elt = document.getElementById("p2");
+            elt.classList.toggle("bg-red-500");
+            elt.classList.toggle("text-white");
+            elt.classList.toggle("text-3xl");
+            elt.classList.toggle("text-center");
+        }
+    </script>
+
+    <br>
+    <br>
+
+    <!-- give dark mode theme -->
+    <p id="p2">This is a styled paragraph</p>
+<button id="btn2" class="border-2 rounded-2xl " onclick="changetoggleStyle()">Change</button>
+
+<script>
+    function changetoggleStyle(){
+        let elt = document.getElementById("p2");
+        elt.classList.toggle("bg-black");
+        elt.classList.toggle("text-white");
+        elt.classList.toggle("text-3xl");
+        elt.classList.toggle("text-center");
+
+        function myfun(){
+            document.getElementById("txt").innerHTML = Math.random();
+        }
+        document.getElementById("btn6").addEventListener("click",myfun);
+
+        function remove(){
+            document.getElementById("btn6").removeEventListener("click",myfun);
+        }
+    }
+</script>
+
+<button class="border-2 border-black" id="btn6">Add EventListener</button>
+<button class="border-2 border-black" id="btn7" onclick="remove()">Remove EventListener</button>
+
+
+
+</body>
+</html>

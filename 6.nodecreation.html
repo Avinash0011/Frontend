@@ -1,0 +1,33 @@
+<!-- document.createElement(tagName)
+document.createTextNode(text)
+parentNode.removeChild(node); Remove a child node from the document -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body>
+    <div >
+    <script>
+        let para = document.createElement("p");
+        para.textContent = "I am creating a new para";
+        document.body.appendChild(para);
+
+        let node = document.createTextNode("Text node content");
+        document.body.appendChild(node);
+
+        let div = document.createElement("div");
+        div.textContent = "Div";
+        div.className="w-44 h-44 bg-green-400";
+        document.body.appendChild(div);
+        div.appendChild(para);
+        div.removeChild(para);
+
+       
+    </script>
+    </div>
+</body>
+</html>

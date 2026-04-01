@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1 {
+            background-color: lightblue;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            padding-top: 90px;
+            font-size: 30px;
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="div1">Hello</div>
+
+    <table>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <script src="../JQuerry/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            const student = {
+                "name": "Diwaker Pandey",
+                "rollno": 1,
+                "marks": 90,
+                "NewAdmission": true,
+                "courses": ["C", "C++", "Java"],
+                "address": {
+                    "city": "Delhi",
+                    "state": "Delhi",
+                    "pincode": 110001
+                }
+            };
+
+            console.log(student);
+            console.log(student.name);
+
+            const a = student.name + "   " + student.courses;
+            $("#div1").html(a);
+
+            for (let i = 0; i < student.courses.length; i++) {
+                $("#div1").append(`<li>${student.courses[i]}</li>`);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
